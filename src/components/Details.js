@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
+import styled from 'styled-components'
 import axios from 'axios'
+
+// OUTSIDE OF THE COMPONENT!!!!!!!!!!!!!!!!!!!!!!
+const StyledDetails = styled.div`
+  background-color: lightblue;
+`
 
 export default function Details(props) {
   const { friendId, close } = props
@@ -13,7 +19,7 @@ export default function Details(props) {
   }, [friendId])
 
   return (
-    <div className='container'>
+    <StyledDetails id='detailsView' className='container'>
       <h2>Details:</h2>
       {
         details &&
@@ -24,11 +30,11 @@ export default function Details(props) {
           <ul>
             {
               details.hobbies.map((like, idx) => <li key={idx}>{like}</li>)
-            }
+            }``
           </ul>
         </>
       }
       <button big onClick={close}>Close</button>
-    </div>
+    </StyledDetails>
   )
 }
