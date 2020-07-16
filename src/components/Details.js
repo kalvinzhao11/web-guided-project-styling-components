@@ -20,7 +20,7 @@ const StyledDetails = styled.div`
     }
 
     &:nth-of-type(2) {
-      color: 'blue';
+      color: blue;
     }
   }
 `
