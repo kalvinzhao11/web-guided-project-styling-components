@@ -23,6 +23,16 @@ const StyledDetails = styled.div`
       color: blue;
     }
   }
+
+  ul {
+    li {
+      color: yellow;
+
+      &:hover {
+        color: pink;
+      }
+    }
+  }
 `
 
 export default function Details(props) {
