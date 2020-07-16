@@ -15,7 +15,7 @@ const kf = keyframes`
     opacity: 0.5;
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) rotate(180deg);
     opacity: 1;
   }
 `
