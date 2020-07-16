@@ -5,7 +5,24 @@ import axios from 'axios'
 
 // OUTSIDE OF THE COMPONENT!!!!!!!!!!!!!!!!!!!!!!
 const StyledDetails = styled.div`
+  /* this applies to the div */
   background-color: lightblue;
+
+  h2 {
+    color: red;
+  }
+
+  p {
+    color: green;
+
+    &:hover {
+      color: pink;
+    }
+
+    &:nth-of-type(2) {
+      color: 'blue';
+    }
+  }
 `
 
 export default function Details(props) {
@@ -30,7 +47,7 @@ export default function Details(props) {
           <ul>
             {
               details.hobbies.map((like, idx) => <li key={idx}>{like}</li>)
-            }``
+            }
           </ul>
         </>
       }
