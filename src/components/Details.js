@@ -3,13 +3,15 @@ import { BASE_URL, API_KEY } from '../constants'
 import styled from 'styled-components'
 import axios from 'axios'
 
+const red = 'crimson'
+
 // OUTSIDE OF THE COMPONENT!!!!!!!!!!!!!!!!!!!!!!
 const StyledDetails = styled.div`
   /* this applies to the div */
   background-color: lightblue;
 
   h2 {
-    color: red;
+    color: ${red};
   }
 
   p {
