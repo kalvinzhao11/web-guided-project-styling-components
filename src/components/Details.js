@@ -8,10 +8,10 @@ const red = 'crimson'
 // OUTSIDE OF THE COMPONENT!!!!!!!!!!!!!!!!!!!!!!
 const StyledDetails = styled.div`
   /* this applies to the div */
-  background-color: ${props => props.alert ? 'red' : 'lightblue' };
+  background-color: ${pr => pr.alert ? 'red' : 'lightblue'};
 
   button {
-    font-size: ${props => props.bigButton ? '2em' : 'initial'}
+    font-size: ${pr => pr.bigButton ? '2em' : 'initial'};
   }
 
   h2 {
