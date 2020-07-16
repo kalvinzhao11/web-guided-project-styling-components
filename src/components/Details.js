@@ -8,7 +8,11 @@ const red = 'crimson'
 // OUTSIDE OF THE COMPONENT!!!!!!!!!!!!!!!!!!!!!!
 const StyledDetails = styled.div`
   /* this applies to the div */
-  background-color: lightblue;
+  background-color: ${props => props.alert ? 'red' : 'lightblue' };
+
+  button {
+    font-size: ${props => props.bigButton ? '2em' : 'initial'}
+  }
 
   h2 {
     color: ${red};
@@ -24,6 +28,10 @@ const StyledDetails = styled.div`
     &:nth-of-type(2) {
       color: blue;
     }
+  }
+
+  .the-paragraph {
+    color: purple;
   }
 
   ul {
@@ -48,13 +56,14 @@ export default function Details(props) {
   }, [friendId])
 
   return (
-    <StyledDetails id='detailsView' className='container'>
+    <StyledDetails alert={props.alert} id='detailsView' className='container'>
       <h2>Details:</h2>
       {
         details &&
         <>
           <p>{details.name} is {details.age}</p>
           <p>email is {details.email}</p>
+          <p className="the-paragraph">hello there</p>
           {name} likes:
           <ul>
             {

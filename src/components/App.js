@@ -43,7 +43,7 @@ export default function App() {
         })
       }
       {
-        currentFriendId && <Details friendId={currentFriendId} close={closeDetails} />
+        currentFriendId && <Details alert={currentFriendId && currentFriendId % 2 === 0} friendId={currentFriendId} close={closeDetails} />
       }
     </div>
   )
