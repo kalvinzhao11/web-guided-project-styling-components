@@ -7,8 +7,16 @@ import Button from './styled/Button'
 const red = 'crimson'
 
 const kf = keyframes`
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
   100% {
-    transform: scale(1)
+    transform: scale(1);
+    opacity: 1;
   }
 `
 
@@ -18,6 +26,7 @@ const StyledDetails = styled.div`
   background-color: ${pr => pr.alert ? 'red' : 'lightblue'};
   transform: scale(0);
   animation: ${kf} 1s ease-in-out forwards;
+  opacity: 0;
 
   h2 {
     color: ${red};
