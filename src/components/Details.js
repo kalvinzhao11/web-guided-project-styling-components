@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import axios from 'axios'
 import Button from './styled/Button'
 
 const red = 'crimson'
 
+const kf = keyframes`
+  100% {
+    transform: scale(1)
+  }
+`
+
 // OUTSIDE OF THE COMPONENT!!!!!!!!!!!!!!!!!!!!!!
 const StyledDetails = styled.div`
   /* this applies to the div */
   background-color: ${pr => pr.alert ? 'red' : 'lightblue'};
+  transform: scale(0);
+  animation: ${kf} 1s ease-in-out forwards;
 
   h2 {
     color: ${red};
