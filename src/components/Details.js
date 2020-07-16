@@ -10,16 +10,6 @@ const StyledDetails = styled.div`
   /* this applies to the div */
   background-color: ${pr => pr.alert ? 'red' : 'lightblue'};
 
-  button {
-    font-size: ${pr => pr.bigButton ? '2em' : 'initial'};
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      background-color: black;
-      color: white;
-      transition: all 0.2s ease-in-out;
-    }
-  }
-
   h2 {
     color: ${red};
   }
