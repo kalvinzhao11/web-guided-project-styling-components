@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL, API_KEY } from '../constants'
 import Details from './Details'
+import { Button } from 'reactstrap';
 
 export default function App() {
   const [friends, setFriends] = useState([])
@@ -28,9 +29,9 @@ export default function App() {
   const Friend = ({ info }) => (
     <div className='friend'>
       {info.name}
-      <button onClick={() => openDetails(info.id)}>
+      <Button color="danger" onClick={() => openDetails(info.id)}>
         See details
-      </button>
+      </Button>
     </div>
   )
 

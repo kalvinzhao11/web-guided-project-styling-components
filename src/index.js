@@ -8,6 +8,8 @@ import App from './components/App'
 // 👉 Importing our styles
 import './styles.css'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 render(
   <App />,
   document.querySelector('#root')
