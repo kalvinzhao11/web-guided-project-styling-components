@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../constants'
 import styled from 'styled-components'
 import axios from 'axios'
+import Button from './styled/Button'
 
 const red = 'crimson'
 
@@ -68,7 +69,8 @@ export default function Details(props) {
           </ul>
         </>
       }
-      <button big onClick={close}>Close</button>
+      <Button bigButton onClick={close}>Close</Button>
+      <Button>Foo</Button>
     </StyledDetails>
   )
 }
